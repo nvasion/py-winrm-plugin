@@ -20,7 +20,7 @@ shell = "cmd"
 certpath = None
 
 if "RD_CONFIG_PASSWORD_STORAGE_PATH" in os.environ:
-    password = os.getenv("RD_CONFIG_PASSWORD_STORAGE_PATH")
+    password = os.getenv("RD_CONFIG_PASSWORD_STORAGE_PATH").strip('\n')
 
 if "RD_CONFIG_AUTHTYPE" in os.environ:
     authentication = os.getenv("RD_CONFIG_AUTHTYPE")
